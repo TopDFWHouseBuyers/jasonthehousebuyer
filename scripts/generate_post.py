@@ -381,43 +381,43 @@ def build_html_page(post: dict, topic: dict) -> str:
   }}
 }}
 </script>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{{box-sizing:border-box;margin:0;padding:0}}
-body{{background:#f8faf8;color:#1a1f1a;font-family:'Montserrat',sans-serif;font-weight:300;line-height:1.6}}
-.site-nav{{background:#0a0a0a;padding:16px 32px;display:flex;align-items:center;justify-content:space-between;border-bottom:3px solid #4ab840;position:sticky;top:0;z-index:100}}
-.nav-logo{{color:#4ab840;font-weight:700;font-size:18px;text-decoration:none}}
+body{{background:#f8faf8;color:#1a1f1a;font-family:'Source Sans 3',sans-serif;font-weight:300;line-height:1.6}}
+.site-nav{{background:#0f1e3d;padding:16px 32px;display:flex;align-items:center;justify-content:space-between;border-bottom:3px solid #e07b20;position:sticky;top:0;z-index:100}}
+.nav-logo{{color:#e07b20;font-weight:700;font-size:18px;text-decoration:none}}
 .nav-logo span{{color:#fff}}
 .nav-links{{display:flex;align-items:center;gap:20px}}
 .nav-links a{{color:rgba(255,255,255,0.7);font-size:12px;font-weight:600;text-decoration:none;letter-spacing:0.05em;text-transform:uppercase}}
-.nav-cta{{background:#4ab840;color:#fff !important;padding:9px 18px;border-radius:2px}}
-.hero-blog{{background:#405440;padding:64px 40px;text-align:center;position:relative;overflow:hidden}}
+.nav-cta{{background:#e07b20;color:#fff !important;padding:9px 18px;border-radius:2px}}
+.hero-blog{{background:#1a2744;padding:64px 40px;text-align:center;position:relative;overflow:hidden}}
 .hero-blog::before{{content:'';position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1200&q=60') center/cover;opacity:0.15}}
 .hero-blog-inner{{position:relative;z-index:1;max-width:800px;margin:0 auto}}
-.hero-cat{{display:inline-block;background:rgba(74,184,64,0.2);border:1px solid rgba(74,184,64,0.4);color:#6dd962;font-size:10px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;padding:5px 12px;border-radius:2px;margin-bottom:16px}}
-.hero-blog h1{{font-family:'Playfair Display',serif;font-size:clamp(26px,4vw,44px);color:#fff;font-weight:700;line-height:1.15;margin-bottom:16px}}
+.hero-cat{{display:inline-block;background:rgba(224,123,32,0.2);border:1px solid rgba(224,123,32,0.4);color:#f59535;font-size:10px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;padding:5px 12px;border-radius:2px;margin-bottom:16px}}
+.hero-blog h1{{font-family:'Lora',serif;font-size:clamp(26px,4vw,44px);color:#fff;font-weight:700;line-height:1.15;margin-bottom:16px}}
 .hero-meta{{font-size:11px;color:rgba(255,255,255,0.5);letter-spacing:0.1em;text-transform:uppercase}}
 .content-layout{{max-width:1100px;margin:0 auto;padding:48px 24px;display:grid;grid-template-columns:1fr 300px;gap:48px;align-items:start}}
 @media(max-width:768px){{.content-layout{{grid-template-columns:1fr}}}}
-.article-body h2{{font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:#1a1f1a;margin:36px 0 14px;line-height:1.2}}
+.article-body h2{{font-family:'Lora',serif;font-size:26px;font-weight:700;color:#1a1f1a;margin:36px 0 14px;line-height:1.2}}
 .article-body h3{{font-size:18px;font-weight:700;color:#1a1f1a;margin:24px 0 10px}}
 .article-body p{{font-size:15px;line-height:1.9;color:#3a4a3a;margin-bottom:16px}}
 .article-body ul,.article-body ol{{padding-left:22px;margin-bottom:16px}}
 .article-body li{{font-size:15px;line-height:1.8;color:#3a4a3a;margin:6px 0}}
-.cta-inline{{background:#0a0a0a;border-left:4px solid #4ab840;padding:24px 28px;margin:32px 0;border-radius:0 4px 4px 0}}
-.cta-inline h3{{color:#4ab840;font-size:16px;font-weight:700;margin-bottom:8px}}
+.cta-inline{{background:#0f1e3d;border-left:4px solid #e07b20;padding:24px 28px;margin:32px 0;border-radius:0 4px 4px 0}}
+.cta-inline h3{{color:#e07b20;font-size:16px;font-weight:700;margin-bottom:8px}}
 .cta-inline p{{color:rgba(255,255,255,0.8);font-size:14px;margin-bottom:16px;line-height:1.7}}
-.cta-inline a{{display:inline-block;background:#4ab840;color:#fff;padding:12px 24px;font-weight:700;font-size:13px;text-decoration:none;border-radius:2px;letter-spacing:0.05em;text-transform:uppercase}}
+.cta-inline a{{display:inline-block;background:#e07b20;color:#fff;padding:12px 24px;font-weight:700;font-size:13px;text-decoration:none;border-radius:2px;letter-spacing:0.05em;text-transform:uppercase}}
 .sidebar{{position:sticky;top:80px}}
-.sidebar-card{{background:#fff;border:1px solid #d4e4d2;border-top:3px solid #4ab840;padding:24px;margin-bottom:20px;border-radius:0 0 4px 4px}}
+.sidebar-card{{background:#fff;border:1px solid #e0d8cc;border-top:3px solid #e07b20;padding:24px;margin-bottom:20px;border-radius:0 0 4px 4px}}
 .sidebar-card h3{{font-size:15px;font-weight:700;color:#1a1f1a;margin-bottom:8px}}
 .sidebar-card p{{font-size:13px;color:#52675f;line-height:1.6;margin-bottom:16px}}
-.sidebar-card .phone{{font-size:20px;font-weight:700;color:#4ab840;text-decoration:none;display:block;margin-bottom:12px}}
-.sidebar-btn{{display:block;background:#0a0a0a;color:#fff;padding:13px;font-weight:700;font-size:12px;text-decoration:none;border-radius:2px;letter-spacing:0.06em;text-transform:uppercase;text-align:center;margin-bottom:8px}}
-.sidebar-btn.green{{background:#4ab840}}
-.back-link{{display:inline-flex;align-items:center;gap:6px;color:#4ab840;text-decoration:none;font-size:12px;font-weight:600;margin-bottom:28px;letter-spacing:0.05em;text-transform:uppercase}}
-footer{{background:#0a0a0a;color:rgba(255,255,255,0.5);text-align:center;padding:28px;font-size:12px;border-top:3px solid #4ab840}}
-footer a{{color:#4ab840;text-decoration:none}}
+.sidebar-card .phone{{font-size:20px;font-weight:700;color:#e07b20;text-decoration:none;display:block;margin-bottom:12px}}
+.sidebar-btn{{display:block;background:#0f1e3d;color:#fff;padding:13px;font-weight:700;font-size:12px;text-decoration:none;border-radius:2px;letter-spacing:0.06em;text-transform:uppercase;text-align:center;margin-bottom:8px}}
+.sidebar-btn.green{{background:#e07b20}}
+.back-link{{display:inline-flex;align-items:center;gap:6px;color:#e07b20;text-decoration:none;font-size:12px;font-weight:600;margin-bottom:28px;letter-spacing:0.05em;text-transform:uppercase}}
+footer{{background:#0f1e3d;color:rgba(255,255,255,0.5);text-align:center;padding:28px;font-size:12px;border-top:3px solid #e07b20}}
+footer a{{color:#e07b20;text-decoration:none}}
 </style>
 </head>
 <body>
@@ -472,7 +472,7 @@ footer a{{color:#4ab840;text-decoration:none}}
     <div class="sidebar-card">
       <h3>Happy With Your Sale?</h3>
       <p style="font-size:12px;color:#52675f;line-height:1.6;margin-bottom:12px">We would love a Google review - it helps other Houston homeowners find us.</p>
-      <a href="https://share.google/vGlYZ46PBCsE6BPhz" target="_blank" rel="noopener" style="display:block;background:#4ab840;color:#fff;padding:10px;font-weight:700;font-size:11px;text-decoration:none;border-radius:2px;letter-spacing:0.06em;text-transform:uppercase;text-align:center">Leave a Google Review</a>
+      <a href="https://share.google/vGlYZ46PBCsE6BPhz" target="_blank" rel="noopener" style="display:block;background:#e07b20;color:#fff;padding:10px;font-weight:700;font-size:11px;text-decoration:none;border-radius:2px;letter-spacing:0.06em;text-transform:uppercase;text-align:center">Leave a Google Review</a>
     </div>
   </div>
 </div>
@@ -480,7 +480,7 @@ footer a{{color:#4ab840;text-decoration:none}}
 <footer>
   {year} Jason The House Buyer · <a href="/">jasonthehousebuyer.com</a> · 281-675-5560 · TX License #0657354<br>
   Serving Houston, Katy, Spring, Sugar Land, Humble, Tomball, Cypress, Pasadena, Pearland, The Woodlands and all Greater Houston areas<br><br>
-  <a href="https://share.google/vGlYZ46PBCsE6BPhz" target="_blank" rel="noopener" style="color:#4ab840">Leave us a Google Review</a>
+  <a href="https://share.google/vGlYZ46PBCsE6BPhz" target="_blank" rel="noopener" style="color:#e07b20">Leave us a Google Review</a>
 </footer>
 
 </body>
