@@ -303,7 +303,7 @@ def generate_post(topic: dict) -> dict:
 
 COMPANY INFO:
 - Name: Jason The House Buyer
-- Phone: 281-675-5560
+- Phone: 972-284-9713
 - Website: https://www.jasonthehousebuyer.com
 - License: TX Real Estate License #0657354
 - Service area: All of Greater Houston - Houston, Katy, Spring, Sugar Land, Humble, Tomball, Cypress, Pasadena, Friendswood, Missouri City, Pearland, The Woodlands, Conroe, League City, Baytown, Rosenberg, Richmond, Jacinto City, Crosby and all surrounding areas
@@ -319,7 +319,7 @@ ASSIGNMENT:
 REQUIREMENTS:
 1. Write genuinely helpful content that answers real questions Houston homeowners have
 2. Use H2 and H3 subheadings naturally throughout
-3. Each CTA should mention 281-675-5560 and link to /#offer
+3. Each CTA should mention 972-284-9713 and link to /#offer
 4. Natural conversational tone - not corporate or salesy
 5. Include Houston-specific context - local neighborhoods, Harris County, Houston market conditions, flood/hurricane considerations where relevant
 6. Include specific, practical advice relevant to Texas law/market
@@ -376,7 +376,7 @@ def build_html_page(post: dict, topic: dict) -> str:
   "publisher": {{
     "@type": "Organization",
     "name": "Jason The House Buyer",
-    "telephone": "281-675-5560",
+    "telephone": "972-284-9713",
     "url": "https://www.jasonthehousebuyer.com"
   }}
 }}
@@ -427,7 +427,7 @@ footer a{{color:#e07b20;text-decoration:none}}
   <div class="nav-links">
     <a href="/">Home</a>
     <a href="/blog/">Blog</a>
-    <a href="tel:2816755560">281-675-5560</a>
+    <a href="tel:9722849713">972-284-9713</a>
     <a href="/#offer" class="nav-cta">Get Cash Offer</a>
   </div>
 </nav>
@@ -456,9 +456,9 @@ footer a{{color:#e07b20;text-decoration:none}}
     <div class="sidebar-card">
       <h3>Get Your Free Cash Offer</h3>
       <p>No fees, no repairs, no commissions. We close in as few as 7 days.</p>
-      <a href="tel:2816755560" class="phone">281-675-5560</a>
+      <a href="tel:9722849713" class="phone">972-284-9713</a>
       <a href="/#offer" class="sidebar-btn green">Get Cash Offer</a>
-      <a href="tel:2816755560" class="sidebar-btn">Call Us Now</a>
+      <a href="tel:9722849713" class="sidebar-btn">Call Us Now</a>
     </div>
     <div class="sidebar-card">
       <h3>How It Works</h3>
@@ -478,7 +478,7 @@ footer a{{color:#e07b20;text-decoration:none}}
 </div>
 
 <footer>
-  {year} Jason The House Buyer · <a href="/">jasonthehousebuyer.com</a> · 281-675-5560 · TX License #0657354<br>
+  {year} Jason The House Buyer · <a href="/">jasonthehousebuyer.com</a> · 972-284-9713 · TX License #0657354<br>
   Serving Houston, Katy, Spring, Sugar Land, Humble, Tomball, Cypress, Pasadena, Pearland, The Woodlands and all Greater Houston areas<br><br>
   <a href="https://share.google/vGlYZ46PBCsE6BPhz" target="_blank" rel="noopener" style="color:#e07b20">Leave us a Google Review</a>
 </footer>
