@@ -9,6 +9,7 @@ import os
 import json
 import re
 import anthropic
+import time
 from datetime import datetime
 from pathlib import Path
 
@@ -339,11 +340,21 @@ Return ONLY valid JSON (no markdown, no backticks, no explanation):
 
     prompt_safe = prompt.encode('ascii', errors='replace').decode('ascii')
 
-    message = client.messages.create(
-        model="claude-sonnet-4-5",
-        max_tokens=4000,
-        messages=[{"role": "user", "content": prompt_safe}]
-    )
+    # Retry up to 3 times on overload
+    for attempt in range(3):
+        try:
+            message = client.messages.create(
+                model="claude-sonnet-4-5",
+                max_tokens=4000,
+                messages=[{"role": "user", "content": prompt_safe}]
+            )
+            break
+        except Exception as e:
+            if 'overloaded' in str(e).lower() and attempt < 2:
+                print(f"API overloaded - waiting 30 seconds before retry {attempt + 2}/3...")
+                time.sleep(30)
+            else:
+                raise
 
     raw = message.content[0].text.strip()
     raw = re.sub(r'^```json\s*', '', raw)
