@@ -359,21 +359,28 @@ Return ONLY valid JSON (no markdown, no backticks, no explanation):
     raw = message.content[0].text.strip()
     raw = re.sub(r'^```json\s*', '', raw)
     raw = re.sub(r'\s*```$', '', raw)
-    # Try to parse - if it fails, retry with shorter word count
+def clean_json(text):
+        text = re.sub(r'^```json\s*', '', text)
+        text = re.sub(r'\s*```$', '', text)
+        text = text.strip()
+        start = text.find('{')
+        end = text.rfind('}')
+        if start != -1 and end != -1:
+            text = text[start:end+1]
+        return text
+
     try:
-        return json.loads(raw)
+        return json.loads(clean_json(raw))
     except json.JSONDecodeError:
         print("JSON parse failed - retrying with shorter word count...")
-        prompt_short = prompt_safe.replace('1,200-1,500 words', '800-1,000 words')
+        prompt_short = prompt_safe.replace('1,200-1,500 words', '700-900 words')
         message2 = client.messages.create(
             model="claude-sonnet-4-5",
-            max_tokens=6000,
+            max_tokens=4000,
             messages=[{"role": "user", "content": prompt_short}]
         )
         raw2 = message2.content[0].text.strip()
-        raw2 = re.sub(r'^```json\s*', '', raw2)
-        raw2 = re.sub(r'\s*```$', '', raw2)
-        return json.loads(raw2)
+        return json.loads(clean_json(raw2))
 
 
 def build_html_page(post: dict, topic: dict) -> str:
